@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="box-border overflow-y-hidden">
+    <div class="w-full h-screen border-solid border-green-600 border-2 bg-emerald-500 flex flex-col items-center justify-center">
+        <header class= "  border-brightRed border-solid border-2  m-auto h-2/3  sm:w-full md:w-2/3 xl:w-2/6  bg-teal-200 flex flex-col items-center justify-center">
+            <form action="/login" method="post" enctype="multipart/form-data" class=" flex justify-evenly items-center flex-col bg-yellow-500 space-y-8  sm:max-md:w-full  border-darkBlue border-2 ">
+                <div class=" font-black xl:text-2xl md:text-xl"> Login</div>
+                <div class="border-2 border-black border-solid w-full sm:max-md:flex sm:max-md:flex-col sm:max-md:items-center ">
+                    <label for="username">username </label>
+                    <input type="text" name="username" id="username" class="w-auto sm:max-md:w-full md:ml-14">
+                </div>
+                <div class="border-2 border-black border-solid sm:max-md:flex sm:max-md:flex-col sm:max-md:items-center w-full md:max-xl:pl-1 ">
+                    <label for="password">password </label>
+                    <input type="password" name="password" id="password" class="w-auto sm:max-md:w-full md:ml-14 ">
+                </div>
+                <div class="border-2 border-black border-solid w-full sm:max-md:flex sm:max-md:flex-col sm:max-md:items-center  ">
+                    <label for="cpassword">confirm password </label>
+                    <input type="password" name="cpassword" id="cpassword" class="w-auto sm:max-md:w-full ">
+                </div>
+                <div class="border-2 border-black border-solid sm:max-md:flex sm:max-md:flex-col sm:max-md:items-center w-full pl-2">
+                    <label for="gmail">gmail </label>
+                    <input type="gmail" name="gmail" id="gmail" class="w-auto sm:max-md:w-full md:ml-20 ">
+                </div>
+                <div class="border-2 border-black border-solid sm:max-md:flex sm:max-md:flex-col sm:max-md:items-center w-full md:max-xl:pl-1">
+                    <label for="mobile">phone no </label>
+                    <input type="tel" name="mobile" id="mobile" class="w-auto sm:max-md:w-full md:ml-14 ">
+                </div>
+                <button type="submit" class="ring-2 ring-green-900 ">submit</button>
+            </form>
+        </header>
+    </div>
+</body>
+</html>

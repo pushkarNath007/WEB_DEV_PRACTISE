@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>file uploading</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: fantasy;
+            background-color: rgba(128, 147, 71, 0.677);
+
+        }
+
+        input[type=file] {
+            display: inline-block;
+            margin: auto;
+            border: 2px solid red;
+            background-color: aqua;
+        }
+
+        #container {
+            width: 320px;
+            height: 280px;
+            margin: auto;
+            border: 2px solid wheat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(5, 5, 4);
+            position: absolute;
+            top: 25%;
+            left: 36%;
+            transform: scale(1.3);
+        }
+
+        button {
+            position: inherit;
+            top: 165px;
+        }
+
+        #second {
+            position: absolute;
+            top: 95%;
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        #imaging{
+            display: inline-block;
+            width:100%;
+            height:233px;
+            max-width: 100%;
+            object-fit:cover;
+            object-position: 100% 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <div id="container">
+            <input type="file" name="img" id="data" required>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+   
+    <div id="second">
+        <% if(data.length>0){%>
+        <% data.forEach((i)=>{%>
+        <div id="data"><img src="<%=i.img%>" alt="image" id="imaging"></div>
+        <%})%>
+        <%}else%>
+        <!-- <div id="data"> no data yet</div> -->
+    </div>
+</body>
+
+</html>

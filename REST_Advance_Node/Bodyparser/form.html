@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: fantasy;
+        }
+
+        text {
+            word-wrap: break-word;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            padding: 22px 10px;
+        }
+
+        input,
+        button {
+            display: inline;
+            width: 40%;
+        }
+
+        button {
+            /* margin:auto; */
+            width: 12%;
+            margin: 22px 12%;
+            background-color: rgb(100, 100, 106);
+        }
+        button:hover {
+            color: yellow;
+            transform: scale(1.1);
+        }
+
+        #form2{
+            z-index: 1;
+        }
+        #togglePassword {
+            margin-left: -30px;
+            cursor: pointer;
+            border: 2px solid red;
+            width: 4px;
+            height: 200px;
+            z-index: 2;
+            position: inherit;
+        }
+    </style>
+    <script>
+        function func() {
+            const input = document.getElementById("form2");
+            if (input.type = "text")
+                input.type = "password";
+            else
+                input.type = "text";
+        }
+    </script>
+</head>
+
+<body>
+    <form action="/" method="post" class="box">
+        <div>name:<input type="text" name="username" id="form1" class="forms" required></div>
+        <br>
+        <div>password:<input type="password" name="password" id="form2" class="forms" required></div>
+        <br>
+        <div>conform password: <input type="password" name="confirmpass" id="form4" class="forms" required></div><br>
+        <div>gmail:<input type="email" name="gmail" id="form3" required></div>
+        <div> phone:<input type="tel" name="phone" id="form5" required> </div>
+        <div> address:<input type="text" name="address" id="form6" required> </div>
+        <div> salary: <input type="number" name="salary" id="form7"  required> </div>
+        <div> month: <input type="number" name="month" id="form7" required> </div>
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>

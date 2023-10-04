@@ -1,0 +1,31 @@
+require('dotenv').config();
+require('./connect');
+const PORT=process.env.PORT;
+const path=require('path');
+const multer=require('multer');
+const model1=require('./model1');
+const express=require('express');
+const authentication=require("./middlewares/verifytoken");
+const uploadhome=require('./routes/home');
+const uploadimg=require('./multer_middleware');
+const uploadsignup=require('./routes/signup');
+const bodyparser=require('body-parser');
+const {check,validationResult,matchedData,sanitizeBody} =require('express-validator');
+const uploadlogin=require('./routes/login');
+const cookieparser=require('cookie-parser');
+const logout=require('./routes/logout');
+const app=express();
+const checkingusername=require('./middlewares/preexisting_data');
+app.set('view engine','ejs');
+app.use(cookieparser());
+app.use(express.static(path.join(__dirname,"gallery")));
+app.set('views',path.join(__dirname,'views'));
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended:false}));
+app.use(uploadsignup);
+app.use(uploadlogin);
+app.use(uploadhome);
+app.use(logout);
+app.listen(PORT);
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,
+        td {
+            padding: 12px;
+        }
+
+        #datas {
+            display: block;
+            background-color: antiquewhite;
+            border-radius: 6px;
+            border: 1px solid black;
+            /* white-space:nowrap; */
+            /* width:99vh */
+            -ms-grid-row-span: 5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>username</th>
+                <th>password</th>
+                <th>gmail</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if(!data){%>
+                <td id="datas"> No match </td>
+                <%} else{%>
+                    <% data.forEach((i)=>{ %>
+                        <tr>
+                            <td>
+                                <%=i.username%>
+                            </td>
+                            <td>
+                                <%=i.password%>"
+                            </td>
+                            <td>
+                                <%=i.gmail%>">
+                            </td>
+                            <td> <a href="/update/21vb5675644454474/<%=i._id%>/56786876"><button type="submit">Update</button></a>
+                            <a href="/delete/21vb5675644454474/<%=i._id%>/56786876"> <button type="submit">Delete</button></a> </td>
+                        </tr>
+                        <% })%>
+                            <%}%>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

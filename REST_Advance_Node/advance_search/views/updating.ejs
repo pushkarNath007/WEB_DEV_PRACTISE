@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=data.username%></title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background-color: rgba(24, 201, 142, 0.677);
+            /* opacity: 0.4; */
+        }
+        text{
+            font-size: larger;
+            font-family: fantasy;
+            font-weight: bold;
+            color:antiquewhite;
+        }
+        #formdata{
+            display: flex;
+            position:absolute;
+            top: 100px;
+            left: 20%;
+            padding: 23px;
+            /* opacity: 1; */
+            color:aliceblue;
+            width:50%;
+            height:40%;
+            margin:auto;
+            border: 2px solid whitesmoke;
+            backdrop-filter:inherit;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border:2px solid grey;
+            background-color: black;
+            word-wrap: break-word;
+            transform: scale(1.4);
+        }
+        div{
+            margin:12px;
+            font-weight:bolder ;
+            padding: auto;
+            /* display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; */
+        }
+        button{
+            position: relative;
+            width:12%;
+            font-weight:bolder;
+            top:12px;
+            left:auto;
+        }
+        input{
+            margin-left: 13px;
+            background-position: center;
+            background-color:rgb(168, 182, 175);
+            font-weight:bold;
+        }
+        #user2{
+            margin-left: 15px;
+        }
+        #user3{
+            margin-left: 43px;
+            /* margin-top: -12px;*/
+           
+        }
+        #last{
+            position:relative;
+            top:-11px;
+        }
+        #subm:hover{
+            /* transform:scale(0.4); */
+            color:rgb(219, 37, 113);
+            background-color: rgb(12, 12, 12);
+            border-color: antiquewhite;
+        }
+        p{
+            height:29px;
+            width:28%;
+            word-wrap: break-word;
+            color:rgb(79, 197, 197);
+            /* border:1px solid rgba(217, 210, 210, 0.866); */
+            border-width: thin;
+            font-size: xx-small;
+           position: relative;
+           top:-21px;
+           left:43px;
+           border-top-width:0px ;
+        }
+    </style>
+</head>
+<body>
+    <form action="/update" method="post" id="formdata">
+        <div>Username:<input type="text" name="username" id="user1" value="<%=data.username%>"></div>
+        <div>password:<input type="text" name="password" id="user2" value="<%=data.password%>"></div>
+        <p>password should contain 1 special character ,1 small character 1 capital character 1 number atleast</p> 
+        <div id="last">gmail:<input type="email" name="gmail" id="user3" value="<%=data.gmail%>"></div> 
+        <div> <input type="hidden" name="id" value="<%=data._id%>"> </div>
+        <button type="submit" id="subm">Update</button>
+    </form>
+</body>
+</html>
